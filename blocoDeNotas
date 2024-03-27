@@ -1,0 +1,133 @@
+Bloco de anotações sobre o GIT:
+
+Teorema dos 3 programadores com GIT:
+
+- Cada programador cria um Branch;
+(Uma branch seria uma versão isolada do projeto)
+- No fim do expediente, o GIT permite os programadores fazerem uma unificação, como cada um estava trabalhando em sua Branch, agora vai pegar as 3 Branchs e unir em uma só
+
+**Adicionar um repositório local**
+
+- Cria a pasta;
+- Entra no diretório pelo CMD (pode usar o DIR para abrir todas as pastas que existem no local onde você está dentro do cmd e ir filtrando com cd <,nomeDaPasta>);
+- Depois de entrar na pasta, ativar aquele diretório como Git init no cmd (Pode limpar o histórico do cmd com cls);
+- Depois, pode dar um git status para ver se todos os arquivos do diretorio estão no repósitorio Git;
+- Caso não estejam, podem dar um git add . (para adicionar todos) ou git add <,nomeDoArquivo> (para adicionar apenas o aquivo especfico), assim o arquivo vai para a área de stage;
+
+**Área de Stage**
+
+A área de stage, também conhecida como "index" no Git, é um conceito fundamental no fluxo de trabalho do Git. É uma área intermediária entre o seu diretório de trabalho (working directory) e o repositório Git. Quando você faz modificações nos arquivos do seu projeto, essas mudanças não são automaticamente registradas no Git. Em vez disso, você precisa adicionar explicitamente as alterações à área de stage antes de confirmá-las (commit) no repositório.
+
+A área de stage serve como um espaço onde você pode revisar e preparar as alterações que deseja incluir no próximo commit. Isso permite que você controle exatamente quais alterações serão incluídas em cada commit, o que é útil para organizar suas mudanças e manter um histórico de commits coeso e significativo.
+
+
+**Commit Git**
+
+Commit é a ação de mandar uma modificação para o GIT, então todo commit que fizer vai guardar todas as alterações naquele arquivo e salvar em histórico no repositório, porém, todos os commits tem que ter um autor, logo, precisa configurar usuário antes de fazer um commit.
+
+**Configurar o GIT**
+
+- Para definir o nome no git: git config --global user.name Gabriel Rosa
+- Definir e-mail: git config --global user.mail gabriel@gmail.com
+
+**Subir arquivos do Stage para GIT**
+
+- Abra o repositório;
+- verifique os status dos arquivos (git status);
+- para subit do stage para git: git commit -m "algum comentário" _OBS: Descrever com o maior número de detalhes possível, nunca deixe em branco_;
+- Enter e commit criado.
+
+_Sempre que for atualizar um arquivo no git commit, tem que passar pelo stage novamente, não pode pular etapa._
+
+
+**Para verificar as versões** 
+- No repositório, digite: git log;
+
+**Viajar entre as versões**
+- Git checkout é um comando que permite voltar em versões do projeto;
+- Para isso, copie os 6 primeiros digitos do id/hash da versão (pegar usando o git log);
+- digite git checkou <,digitosDoHash>;
+
+
+
+- **Não dar git checkout sem commit antes**
+- **Antes de dar um GIT CHECKOUT dar um GIT LOG para validar que não tem nada sem commit.
+- **Não pode voltar no tempo (git checkout), alterar algo e dar git commit novamente**.
+
+
+
+**Voltar para o 'futuro'/última versão do meu projeto/versão atual**:
+
+- Comando para voltar para a última versão, mais atualizada do projeto: git checkout master.
+
+-----------------
+
+
+**Branchs no GIT**:
+- Quando cria um branch você cria uma copia exata do commit atual;
+- Depois os programadores ficam o dia inteiro trabalhando cada um em sua branch, dando os commits;
+- Depois unifica as branchs em um Merge (puxa para a branch main);
+- Cada Merge gera uma ação de Commit.
+
+
+- **Sempre que for criar algo novo, criar uma nova Branch, partindo da main**
+
+
+
+- **Caso esteja com um commit desatualizado em relação ao main, por exemplo, pegou férias ou ficou doente e quando voltou sua branch está muito desatualizada**:
+- Agora eu preciso fazer um merge da main para minha branch
+- Invés de jogar da minha branch para a main, fazer o contrario, da main para a minha;
+
+
+**Como criar Branch:**
+- _Nunca usar espaços ou caracteres especiais nas minhas branchs_;
+- Para criar utilize o código git branch nome-do-branch;
+- Para mudar para o branch que criou: git checkout nome-do-branch;
+- Agora nessa linha do tempo pode começar a trabalhar na nova funcionalidades;
+
+**Como voltar para a Branch Master**:
+- _Sempre que for voltar de uma Branch para outra, tenha certeza que fez os commits das alterações;_
+- Para voltar: git checkout master/main.
+
+**Como renomear Breanchs**
+- Git branch -m novoNome; (ele vai alterar o nome da branch que você está)
+
+-------------
+
+**Como fazer Merge para a branch main/master**
+
+Se eu criar um commit na minha branch 2 e voltar para a main, ele não existira na main, apenas na branch 2.
+
+- Primeiro tem que estar na branch principal;
+- Depois dar um git merge nome-da-branch que você quer trazer;
+- Este comando significa que quero mesclar todo conteúdo da branch X com a Main.
+
+-----------------------
+
+**Usando GitHub como repositório do Git**:
+
+- 1º Criar repositório no GitHub;
+
+**Pegar repositório que está na web para meu pc:**
+- Vai no repositório;
+- Vai na opção <>Code;
+- copie a url do https;
+- criar uma nova pasta onde será o repositório;
+- Criar a pasta no cmd;
+- digitar o comando: git clone <url, que pegamos no github>.
+
+
+**Subir modificações para o repositório remoto no github**
+
+- Depois de dar o git add e commit da nova versão/atualização;
+- rodar o comando: git push origin nomeDaBrunch;
+
+
+-------------------------------------
+
+
+
+
+
+
+
