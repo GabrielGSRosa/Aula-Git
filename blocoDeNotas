@@ -1,5 +1,3 @@
-Bloco de anotações sobre o GIT:
-
 Teorema dos 3 programadores com GIT:
 
 - Cada programador cria um Branch;
@@ -9,7 +7,7 @@ Teorema dos 3 programadores com GIT:
 **Adicionar um repositório local**
 
 - Cria a pasta;
-- Entra no diretório pelo CMD (pode usar o DIR para abrir todas as pastas que existem no local onde você está dentro do cmd e ir filtrando com cd <,nomeDaPasta>);
+- Entra no diretório pelo CMD (pode usar o DIR para abrir todas as pastas que existem no local onde você está dentro do cmd e ir filtrando com cd <,nomeDaPasta>;
 - Depois de entrar na pasta, ativar aquele diretório como Git init no cmd (Pode limpar o histórico do cmd com cls);
 - Depois, pode dar um git status para ver se todos os arquivos do diretorio estão no repósitorio Git;
 - Caso não estejam, podem dar um git add . (para adicionar todos) ou git add <,nomeDoArquivo> (para adicionar apenas o aquivo especfico), assim o arquivo vai para a área de stage;
@@ -125,7 +123,31 @@ Se eu criar um commit na minha branch 2 e voltar para a main, ele não existira 
 
 -------------------------------------
 
+**Git Pull**
 
+git pull origin significa que vai pegar as modificações que estão no repositório remoto e salvar as alterações;
+
+Agora quando rodar o git log vai estar na versão mais recente e vai poder criar uma nova branch para começar a trabalhar.
+
+_Antes de criar uma nova branch, ter certeza que está na branch mais recente_
+
+
+--------------------
+**Resolvendo Conflitos no Git**
+
+A questão de resolver conflitos é mais questão de comunicação do time do que mexer no git.
+
+Como conflitos podem acontecer:
+- O chefe pediu para o programador A e o B fazerem exatamente a mesma coisa, mas com conteúdo diferente (pediu para mexer na mesma coisa ao mesmo tempo);
+
+--------------------------
+
+**Pull request**:
+Isso é um tipo de regra onde eu posso ditar algumas sentenças/regras antes de publicar um merge no branch main;
+
+Ajuda a aumentar a segurança da branch main.
+
+**Para configurar um pull request, tem que adicionar uma regra de proteção de branch no repositório no github**
 
 
 
