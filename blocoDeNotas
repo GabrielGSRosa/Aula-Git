@@ -149,7 +149,49 @@ Ajuda a aumentar a segurança da branch main.
 
 **Para configurar um pull request, tem que adicionar uma regra de proteção de branch no repositório no github**
 
+------------------------------
+
+**Atualizar um repositório que já tem pasta criada no github**
 
 
-
-
+1. **Clonar o Repositório Remoto:** Se você ainda não clonou o repositório remoto para o seu computador local, você pode fazer isso usando o comando `git clone`. Por exemplo:
+    
+    bashCopy code
+    
+    `git clone <url_do_repositorio>`
+    
+    Substitua `<url_do_repositorio>` pela URL do repositório remoto no GitHub.
+    
+2. **Vincular o Repositório Local ao Remoto:** Certifique-se de que o diretório local onde você tem os arquivos está vinculado ao repositório remoto no GitHub. Para fazer isso, você precisa configurar o repositório remoto usando o comando `git remote add origin <url_do_repositorio>`. Por exemplo:
+    
+    csharpCopy code
+    
+    `git remote add origin <url_do_repositorio>`
+    
+    Isso vai estabelecer uma conexão entre seu repositório local e o remoto.
+    
+3. **Atualizar o Repositório Local:** Antes de começar a trabalhar no seu código, é uma boa prática garantir que você esteja trabalhando com a versão mais recente do código do repositório remoto. Você pode fazer isso executando o comando `git pull origin master` (ou substituindo `master` pelo nome do ramo que você está usando). Por exemplo:
+    
+    Copy code
+    
+    `git pull origin master`
+    
+    Isso trará quaisquer alterações feitas no repositório remoto para o seu repositório local.
+    
+4. **Fazer as Alterações Locais:** Agora você pode fazer as alterações desejadas nos arquivos do seu diretório local.
+    
+5. **Adicionar e Confirmar as Alterações:** Depois de fazer as alterações, você precisa adicionar os arquivos modificados ao "stage" usando o comando `git add` e depois confirmar as alterações usando `git commit`. Por exemplo:
+    
+    sqlCopy code
+    
+    `git add . git commit -m "Mensagem de commit"`
+    
+6. **Enviar as Alterações para o Repositório Remoto:** Depois de confirmar suas alterações, você pode enviá-las para o repositório remoto usando o comando `git push`. Por exemplo:
+    
+    perlCopy code
+    
+    `git push origin master`
+    
+    Isso enviará suas alterações para o ramo `master` do repositório remoto.
+    
+7. **Repetir o Processo:** Repita os passos conforme necessário sempre que você quiser atualizar ou enviar alterações para o repositório remoto.
